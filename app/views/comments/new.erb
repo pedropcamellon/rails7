@@ -1,0 +1,27 @@
+<div class="new-comment-container">
+  <div class="close-comment-new">
+    <button type="button" class="justify-content-end close" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="new-comment-form">
+    <%= form_for @comment, url: {action: 'create'} do |f| %>
+    <div class="form-group">
+      <%= f.label '', 'Title', class: 'small' %>
+      <%= f.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="form-group">
+      <%= f.label '', 'Body*', class: 'small' %>
+      <%= f.text_area :body, class: 'form-control', rows: 4 %>
+    </div>
+    <%= f.submit 'Add Comment', id: 'comment_submit', class: 'btn btn-primary btn-block btn-sm', disabled: true %>
+    <% end %>
+  </div>
+  <% if @errors %>
+  <ul>
+    <% @errors.each do |error| %>
+    <li><small><%= error %></small></li>
+    <% end %>
+  </ul>
+  <% end %>
+</div>

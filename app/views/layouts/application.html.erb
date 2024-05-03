@@ -1,16 +1,60 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Rails7</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Railsforce</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="apple-touch-icon" sizes="76x76" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="manifest" href="/assets/manifest.json">
+    <link rel="mask-icon" href="/assets/safari-pinned-tab.svg" color="#5bbad5">
   </head>
 
   <body>
+    <nav class="navbar navbar-expand-lg navbar-light justify-content-between" style="background-color: #AFD0BF">
+      <a class="navbar-brand" href="/">
+        <img src="/assets/railsforce.png" alt="Railsforce" width="60">
+      </a>
+      <ul class="nav">
+        <% if @current_user = User.find_by(id: session[:user_id]) %>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/<%= @current_user.id %>/clients">Clients</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/<%= @current_user.id %>"><%= @current_user.first_name %> <%= @current_user.last_name %></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout">Log Out</a>
+        </li>
+        <% else %>
+        <li class="nav-item">
+          <a class="nav-link" href="/#about">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#products">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/#contact">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/users/new">Sign Up</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login">Log In</a>
+        </li>
+        <% end %>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <% flash.each do |key, value| %>
+        <div class="alert alert-<%= key %>"><%= value %></div>
+      <% end %>
+    </div>
+
     <%= yield %>
   </body>
 </html>
