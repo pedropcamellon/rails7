@@ -1,11 +1,247 @@
 //= require_tree .
 @import "bootstrap";
 
-.nav-link {
-  color: #19647E;
+$color-ecruwhite: #f9f8f1;
+$color-bottlegreen: #0b3721;
+
+.navbar {
+  background-color: white;
+
+  .navbar-brand {
+    color: $color-bottlegreen;
+    font-weight: bold;
+  }
+
+  .nav-link {
+    color: $color-bottlegreen;
+  }
 }
 
 .alert {
   margin-top: 20px;
+  padding: 10px;
+}
+
+section {
+  padding-block: 4rem;
+
+  .container {
+    width: 80%;
+  }
+}
+
+.intro {
+  background-color: $color-ecruwhite;
+}
+
+.about-container {
+  background-color: white;
+
+  .img-container {
+    max-height: 300px;
+  
+    img {
+      object-fit: cover;
+    }
+  }
+}
+
+.services-container {
+  color: $color-bottlegreen;
+  background-color: $color-ecruwhite;
+}
+
+.contact-container {
+  background-color: white;
+
+  .btn {
+    background-color: $color-bottlegreen;
+    color: $color-ecruwhite;
+  }
+}
+
+.footer {
+  color: $color-ecruwhite;
+  background-color: $color-bottlegreen;
+}
+
+// Auth
+
+.signup-logo {
+  text-align: center;
+  padding: 20px;
+}
+
+.signup-form-container {
+  background-color: $color-ecruwhite;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  border-radius: 10px;
+}
+
+.signup-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.edit-form-container {
+  background-color: $color-ecruwhite;
+  padding: 10px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  border-radius: 10px;
+}
+
+.edit-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.edit-title {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.profile-text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.login-logo {
+  text-align: center;
+  padding: 20px;
+}
+
+.login-form-container {
+  background-color: $color-ecruwhite;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  border-radius: 10px;
+}
+
+.login-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.title-heading {
+  margin-top: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contents-container {
+  padding: 20px;
+}
+
+.contacts-container {
+  background-color: $color-ecruwhite;
+  padding: 10px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+// Contacts
+
+.contacts-header {
+  text-align: center;
+  padding: 10px;
+}
+
+.new-contact-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.contact-edit-container {
+  padding: 10px;
+}
+
+.close-contact-edit {
+  margin-bottom: 15px;
+}
+
+.close-contact-new {
+  margin-right: 17px;
+}
+
+// Clients
+
+.index-container {
+  padding: 20px;
+}
+
+.clients-list {
+  background-color: $color-ecruwhite;
+  padding: 20px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 15px;
+  text-align: center;
+}
+
+.new-client-container {
+  padding: 15px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: $color-ecruwhite;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+// Comments
+
+.new-comment-form {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 15px;
+}
+
+.close-comment-new {
+  margin-right: 20px;
+}
+
+.comments-container {
+  background-color: #808f87;
+  padding: 5px;
+  display: block;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+.comments-header {
+  text-align: center;
   padding: 10px;
 }

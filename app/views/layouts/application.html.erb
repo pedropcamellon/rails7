@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Railsforce</title>
+    <title>People</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -14,9 +14,9 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light justify-content-between" style="background-color: #AFD0BF">
+    <nav class="navbar navbar-expand-lg justify-content-between px-5">
       <a class="navbar-brand" href="/">
-        <img src="/assets/railsforce.png" alt="Railsforce" width="60">
+        People
       </a>
       <ul class="nav">
         <% if @current_user = User.find_by(id: session[:user_id]) %>
@@ -56,5 +56,15 @@
     </div>
 
     <%= yield %>
+
+    <footer class="footer py-3">
+      <div class="container">
+        <div class="row">
+          <div class="col text-center">
+            <p class="mb-0">© 2024 People. All rights reserved.</p>
+          </div>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
