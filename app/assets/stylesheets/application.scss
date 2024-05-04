@@ -1,17 +1,18 @@
-//= require_tree .
-@import "bootstrap";
-
 $color-ecruwhite: #f9f8f1;
 $color-bottlegreen: #0b3721;
 
-.btn-demo {
-  background-color: $color-bottlegreen;
-  color: $color-ecruwhite;
-  border: none;
-}
+$theme-colors: (
+  "primary": $color-bottlegreen,
+  "success": $color-bottlegreen,
+  "dark": $color-bottlegreen,
+  "light": #fff
+);
+
+//= require_tree .
+@import "bootstrap";
 
 .navbar {
-  background-color: white;
+  background-color: theme-color("light");
 
   .navbar-brand {
     color: $color-bottlegreen;
