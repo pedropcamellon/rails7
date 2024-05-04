@@ -1,31 +1,37 @@
-<div class="signup-form-container">
-  <div class="signup-form">
-    <%= form_for @user, url: { action: 'create' } do |f| %>
-    <div class="form-group">
-      <%= f.label '', 'First Name', class: 'small' %>
-      <%= f.text_field :first_name, placeholder: 'Jessica', class: 'form-control' %>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col d-flex justify-content-center">
+          <div class="signup-form p-3 rounded">
+            <%= form_for @user, url: { action: 'create' } do |f| %>
+            <div class="form-group">
+              <%= f.label '', 'First Name', class: 'small' %>
+              <%= f.text_field :first_name, placeholder: 'Jessica', class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label '', 'Last Name', class: 'small' %>
+              <%= f.text_field :last_name, placeholder: 'Jones', class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label '', 'Company', class: 'small' %>
+              <%= f.text_field :company, placeholder: 'Alias Investigations', class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label '', 'Email', class: 'small' %>
+              <%= f.email_field :email, placeholder: 'jessica.jones@ai.com', class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label '', 'Password', class: 'small' %>
+              <%= f.password_field :password, class: 'form-control' %>
+            </div>
+            <div class="form-group">
+              <%= f.label '', 'Confirm Password', class: 'small' %>
+              <%= f.password_field :password_confirmation, class: 'form-control' %>
+            </div>
+            <%= f.submit 'Create Account', class: 'btn btn-block btn-demo' %>
+            <% end %>
+          </div>
+      </section>
     </div>
-    <div class="form-group">
-      <%= f.label '', 'Last Name', class: 'small' %>
-      <%= f.text_field :last_name, placeholder: 'Jones', class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label '', 'Company', class: 'small' %>
-      <%= f.text_field :company, placeholder: 'Alias Investigations', class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label '', 'Email', class: 'small' %>
-      <%= f.email_field :email, placeholder: 'jessica.jones@ai.com', class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label '', 'Password', class: 'small' %>
-      <%= f.password_field :password, class: 'form-control' %>
-    </div>
-    <div class="form-group">
-      <%= f.label '', 'Confirm Password', class: 'small' %>
-      <%= f.password_field :password_confirmation, class: 'form-control' %>
-    </div>
-    <%= f.submit 'Create Account', class: 'btn btn-primary btn-block' %>
-    <% end %>
   </div>
 </div>

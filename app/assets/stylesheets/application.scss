@@ -4,6 +4,12 @@
 $color-ecruwhite: #f9f8f1;
 $color-bottlegreen: #0b3721;
 
+.btn-demo {
+  background-color: $color-bottlegreen;
+  color: $color-ecruwhite;
+  border: none;
+}
+
 .navbar {
   background-color: white;
 
@@ -39,7 +45,7 @@ section {
 
   .img-container {
     max-height: 300px;
-  
+
     img {
       object-fit: cover;
     }
@@ -53,11 +59,6 @@ section {
 
 .contact-container {
   background-color: white;
-
-  .btn {
-    background-color: $color-bottlegreen;
-    color: $color-ecruwhite;
-  }
 }
 
 .footer {
@@ -72,21 +73,9 @@ section {
   padding: 20px;
 }
 
-.signup-form-container {
-  background-color: $color-ecruwhite;
-  padding: 10px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 600px;
-  border-radius: 10px;
-}
-
 .signup-form {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 10px;
+  background-color: $color-ecruwhite;
+  width: 500px;
 }
 
 .edit-form-container {
