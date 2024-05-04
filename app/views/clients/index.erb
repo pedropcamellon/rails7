@@ -4,7 +4,7 @@
   </div>
   <div class="add-client-container">
     <div class="text-right">
-      <%= link_to "Add Client", new_user_client_path, class: "btn btn-success btn-sm add-client-btn" %>
+      <%= link_to "Add Client", new_user_client_path, class: "btn btn-primary btn-sm add-client-btn" %>
     </div>
   </div>
   <div class="clients-list">
@@ -26,6 +26,16 @@
           <h6>Last Comment</h6>
         </div>
       </div>
+
+      <% if @clients.empty? %>
+        <div class="row">
+          <div class="col">
+            <h6>No Clients</h6>
+          </div>
+        </div>
+      <% end %>
+
+      <% if @clients.any? %>
       <% @clients.each do |client| %>
       <div class="list-group-item">
         <div class="row">
@@ -60,6 +70,7 @@
           </div>
         </div>
       </div>
+      <% end %>
       <% end %>
     </div>
   </div>
