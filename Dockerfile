@@ -22,9 +22,8 @@ RUN apt-get update -qq && \
     apt-get install --no-install-recommends -y build-essential git libvips pkg-config
 
 # Check if Node.js is installed
-# RUN which nodejs > /dev/null 2>&1 && echo "Node.js is installed." || echo "Node.js is not installed. Installing now..." && \
-#     apt-get install -y nodejs && \
-#     echo "Node.js has been installed."
+RUN apt-get install -y nodejs && \
+    echo "Node.js has been installed."
 
 # Install application gems
 COPY Gemfile Gemfile.lock ./
