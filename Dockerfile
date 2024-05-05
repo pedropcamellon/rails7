@@ -26,7 +26,7 @@ RUN apt-get install -y nodejs && \
     echo "Node.js has been installed."
 
 # Run dummy process for prevent the container from stopping
-RUN tail -f /dev/null
+CMD ["tail", "-f /dev/null"]
 
 # Install application gems
 # COPY Gemfile Gemfile.lock ./
