@@ -10,47 +10,43 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_05_03_212346) do
+ActiveRecord::Schema[7.1].define(version: 2024_05_03_180555) do
   create_table "clients", force: :cascade do |t|
+    t.string "company_name", null: false
+    t.integer "value", null: false
+    t.integer "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "company_name"
-    t.integer "value"
-    t.integer "user_id"
     t.index ["user_id"], name: "index_clients_on_user_id"
   end
 
   create_table "comments", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "title"
-    t.text "body"
-    t.integer "client_id", null: false
-    t.index ["client_id"], name: "index_comments_on_client_id"
   end
 
   create_table "contacts", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "role", null: false
+    t.string "email", null: false
+    t.string "phone", null: false
+    t.boolean "decision_maker", null: false
+    t.integer "client_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "name"
-    t.string "role"
-    t.string "email"
-    t.string "phone"
-    t.boolean "decision_maker"
-    t.integer "client_id", null: false
     t.index ["client_id"], name: "index_contacts_on_client_id"
   end
 
   create_table "users", force: :cascade do |t|
+    t.string "first_name", null: false
+    t.string "last_name", null: false
+    t.string "company", null: false
+    t.string "email", null: false
+    t.string "password_digest", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string "first_name"
-    t.string "last_name"
-    t.string "company"
-    t.string "email"
-    t.string "password_digest"
   end
 
-  add_foreign_key "comments", "clients"
+  add_foreign_key "clients", "users"
   add_foreign_key "contacts", "clients"
 end
