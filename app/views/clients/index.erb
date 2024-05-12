@@ -54,20 +54,23 @@
               <small><%= client.contacts.where(decision_maker: true).first.role %></small>
             <% end %>
           </div>
-          <div class="col">
-            <% if client.comments.last == nil %>
-              <small>n/a</small>
-            <% else %>
-              <small><%= client.comments.last.created_at.strftime("%b. %d %Y") %></small>
-            <% end %>
-          </div>
-          <div class="col text-truncate">
-            <% if client.comments.last == nil %>
-              <small>n/a</small>
-            <% else %>
-              <small><%= client.comments.last.body %></small>
-            <% end %>
-          </div>
+            <% if client.comments %>
+              <div class="col">
+                <% if client.comments.last == nil %>
+                  <small>n/a</small>
+                <% else %>
+                  <small><%= client.comments.last.created_at.strftime("%b. %d %Y") %></small>
+                <% end %>
+              </div>
+              <div class="col text-truncate">
+                <% if client.comments.last == nil %>
+                  <small>n/a</small>
+                <% else %>
+                  <small><%= client.comments.last.body %></small>
+                <% end %>
+              </div>
+            </div>
+          <% end %>
         </div>
       </div>
       <% end %>
