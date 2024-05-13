@@ -2,8 +2,8 @@
   // These tasks will run in order when initializing your CodeSandbox project.
   "setupTasks": [
     {
-      "command": "bundle install",
-      "name": "b"
+      "name": "b",
+      "command": "bundle install"
     }
   ],
 
@@ -16,7 +16,10 @@
     "r": {
       "name": "r",
       "command": "rails s",
-      "runAtStart": false
+      "runAtStart": true,
+      "preview": {
+        "port": 3000
+      }
     }
   }
 }
