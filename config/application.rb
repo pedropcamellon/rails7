@@ -24,6 +24,10 @@ module Rails7
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
 
+    # CS
     config.hosts << "gnrpyq-3000.csb.app"
+
+    # TODO Enable
+    config.action_controller.default_protect_from_forgery = false
   end
 end
