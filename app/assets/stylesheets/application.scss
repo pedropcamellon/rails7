@@ -3,6 +3,7 @@ $color-bottlegreen: #0b3721;
 
 $theme-colors: (
   "primary": $color-bottlegreen,
+  "secondary": $color-ecruwhite,
   "success": $color-bottlegreen,
   "dark": $color-bottlegreen,
   "light": #fff
@@ -144,10 +145,6 @@ section {
   padding: 15px;
 }
 
-.contact-edit-container {
-  padding: 10px;
-}
-
 .close-contact-edit {
   margin-bottom: 15px;
 }
@@ -199,7 +196,6 @@ section {
 }
 
 .comments-container {
-  background-color: #808f87;
   padding: 5px;
   display: block;
   margin-top: 20px;
