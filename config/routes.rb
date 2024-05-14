@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
   
   # Include routes from separate files
-  Dir[Rails.root.join('config/routes/*.rb')].each { |file| instance_eval(File.read(file)) }
+  draw(:health_routes) # Will load another route file located in `config/routes/health_routes.rb`
+  draw(:sessions_routes)
   
   resources :users, except: [:index] do
     resources :clients do
